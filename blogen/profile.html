@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogen Admin Area</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h3 class="d-inline">Blogen</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="index.html">Dashbook</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="posts.html">Posts</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="users.html">Users</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i> Welcome
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="profile.html">
+                                    <i class="fas fa-user-circle"></i> Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="settings.html">
+                                    <i class="fas fa-cog"></i> Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fas fa-user-ninja"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN HEADER -->
+    <header id="main-header" class="bg-primary text-white py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>
+                        <i class="fas fa-user"></i> Edit Profile
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ACTIONS -->
+    <section id="action" class="py-4 mb-4 bg-light">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-3 me-auto">
+                    <div class="d-grid">
+                        <a href="index.html" class="btn btn-dark" role="button">
+                            <i class="fas fa-backward"></i> Back To Dashboard
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-grid">
+                        <a href="#" class="btn btn-success" role="button" data-bs-toggle="modal"
+                            data-bs-target="#passwordModal">
+                            <i class="fas fa-lock"></i> Change Password
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-grid">
+                        <a href="#" class="btn btn-danger" role="button">
+                            <i class="fas fa-minus"></i> Delete Account
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PASSWORD MODAL -->
+    <div class="modal fade" id="passwordModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Add User</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input class="form-control" type="password" id="password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="conpassword" class="form-label">Confirm Password</label>
+                            <input class="form-control" type="password" id="conpassword">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Update Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDIT PROFILE -->
+    <section id="profile">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-9">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Edit Profile</h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" value="John Doe">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input class="form-control" type="email" id="email" value="johndoe1776@gmail.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="bio" class="form-label">Bio</label>
+                                    <textarea name="editor1" id="bio" class="form-control">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem pariatur adipisci deserunt odit accusantium itaque, nesciunt deleniti quos non! Nulla aliquam quod, expedita nostrum sapiente iusto delectus ipsam impedit cum!
+                                    </textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h3>Your Avatar</h3>
+                    <img src="./img/avatar.png" alt="Avatar" class="img-fluid mb-3">
+                    <div class="d-grid mb-3">
+                        <button class="btn btn-primary">Edit Image</button>
+                    </div>
+                    <div class="d-grid mb-3">
+                        <button class="btn btn-danger">Delete Image</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="bg-dark text-muted mt-5 p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="lead text-center">
+                        Copyright &copy; 2021 Blogen
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/bf5ef06a1f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+</body>
+
+</html>
