@@ -1,0 +1,7 @@
+@media (min-width: 500px) and (max-width: 992px) {
+    img[src="./img/avatar.png"] {
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+    }
+}
